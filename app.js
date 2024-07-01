@@ -1,5 +1,4 @@
 const API_KEY= '0NzIU9h1FiQYX8Jch6YETio1JrAb0vd5'
-// const query = "lemons"
 const searchForm = document.querySelector('#searchForm')
 const searchInput = document.querySelector('#searchInput')
 const gifContainer = document.querySelector('#gifContainer')
@@ -41,10 +40,11 @@ searchForm.addEventListener('submit', async function(e){
   }
 })
 
-clearButton.addEventListener('click', function(){
+function clearGifContainer() {
   gifContainer.innerHTML = ''
-})
+}
 
+clearButton.addEventListener('click', clearGifContainer)
 
 function appendGifToPage(gifUrl){
   const img = document.createElement('img')
